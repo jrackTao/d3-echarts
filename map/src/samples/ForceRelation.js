@@ -70,13 +70,28 @@ export default class App extends Component {
     const {
       layout: {width, height}
     } = node;
-    console.log(node);
     const r = width > height ? width / 2 : height / 2;
     console.log('radius', r);
     return r;
   };
 
   ticked = () => {
+    const {config} = this.props;
+    this.nodes.forEach(node => {
+      const {width, height} = node.layout;
+      if (node.x < width / 2) {
+        node.x = width / 2;
+      }
+      if (node.x > config.width - width / 2) {
+        node.x = config.width - width / 2;
+      }
+      if (node.y < height / 2) {
+        node.y = height / 2;
+      }
+      if (node.y > config.height - height / 2) {
+        node.y = config.height - height / 2;
+      }
+    });
     this.setState({});
   };
 
@@ -91,7 +106,11 @@ export default class App extends Component {
         {this.nodes.map(node => {
           if (node.value.length) {
             return (
-              <div className="box-c" style={{left: node.x, top: node.y}}>
+              <div
+                key={node.name}
+                className="box-c"
+                style={{left: node.x, top: node.y}}
+              >
                 {node.value.map(v => (
                   <div className="box-r">
                     <div className="box-l"></div>
@@ -103,7 +122,11 @@ export default class App extends Component {
           }
           return null;
         })}
-        <svg width="100%" height="100%" viewBox={`0 0 ${config.width} ${config.height}`}>
+        <svg
+          width="100%"
+          height="100%"
+          viewBox={`0 0 ${config.width} ${config.height}`}
+        >
           {this.nodes.map(node => {
             const {
               center: [x1, y1],
@@ -111,7 +134,16 @@ export default class App extends Component {
               y: y2
             } = node;
             if (node.value.length) {
-              return <line x1={x1} y1={y1} x2={x2} y2={y2} className="link" />;
+              return (
+                <line
+                  key={node.name}
+                  x1={x1}
+                  y1={y1}
+                  x2={x2}
+                  y2={y2}
+                  className="link"
+                />
+              );
             }
             return null;
           })}

@@ -192,7 +192,6 @@ export default class Map extends Component {
     const {config} = this.props;
     return (
       <div className="geo-c">
-        <div className="test-coo"></div>
         <ReactEcharts
           ref={this.chartRef}
           option={this.getOption()}

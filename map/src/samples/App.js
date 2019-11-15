@@ -7,8 +7,8 @@ export default class App extends Component {
   state = {
     nodes: [],
     config: {
-      width: 1920,
-      height: 1080,
+      width: 1000,
+      height: 800,
     }
   };
 
