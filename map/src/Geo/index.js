@@ -11,6 +11,10 @@ export default class Map extends Component {
   static defaultProps = {
     renderView: () => {},
     rootSize:14,
+    config:{
+      width:800,
+      height:500
+    }
   };
 
   state = {
@@ -185,6 +189,7 @@ export default class Map extends Component {
   }
 
   render() {
+    const {config} = this.props;
     return (
       <div className="geo-c">
         <div className="test-coo"></div>
@@ -193,10 +198,7 @@ export default class Map extends Component {
           option={this.getOption()}
           notMerge={true}
           lazyUpdate={false}
-          style={{
-            height: 500,
-            width: 800
-          }}
+          style={config}
           onEvents={{
             click: this.handleClick
           }}

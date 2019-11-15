@@ -5,25 +5,47 @@ import './style.scss';
 
 export default class App extends Component {
   state = {
-    nodes: []
+    nodes: [],
+    config: {
+      width: 1920,
+      height: 1080,
+    }
   };
 
   renderView = nodes => {
     // console.log(nodes);
+    nodes = nodes.map(node => {
+      const value = new Array(~~(Math.random() * 8))
+        .fill(0)
+        .map(
+          i =>
+            node.name +
+            new Array(~~(Math.random() * 5 + 2)).fill('医院').join('')
+        );
+      let maxLen = 0;
+      value.forEach(v => v.length > maxLen && (maxLen = v.length));
+      node.layout = {
+        width: maxLen * 15 + 10,
+        height: value.length * 15 + 10
+      };
+      node.value = value;
+      return node;
+    });
     this.setState({
       nodes
     });
   };
 
   render() {
-    const {nodes} = this.state;
+    const {nodes, config} = this.state;
     return (
-      <div style={{position: 'relative', width: 800}}>
+      <div style={{position: 'relative', width: config.width}}>
         <ForceRelation
+          config={config}
           nodes={nodes}
           style={{position: 'absolute', left: 0, top: 0, right: 0, bottom: 0}}
         ></ForceRelation>
-        <MapView renderView={this.renderView}></MapView>
+        <MapView renderView={this.renderView} config={config}></MapView>
       </div>
     );
   }
