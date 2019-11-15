@@ -11,3 +11,4 @@
 {"$$indexCreated":{"fieldName":"type","unique":true}}
 {"$$indexCreated":{"fieldName":"type","unique":true}}
 {"$$indexCreated":{"fieldName":"type","unique":true}}
+{"$$indexCreated":{"fieldName":"type","unique":true}}
