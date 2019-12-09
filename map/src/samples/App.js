@@ -15,7 +15,7 @@ export default class App extends Component {
   renderView = nodes => {
     // console.log(nodes);
     nodes = nodes.map(node => {
-      const value = new Array(~~(Math.random() * 8))
+      const value = new Array(~~(Math.random() * 6))
         .fill(0)
         .map(
           i =>

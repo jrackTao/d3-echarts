@@ -5,11 +5,11 @@ import ClassNames from 'classnames';
 import request from 'superagent';
 // import './style.less';
 
-const URL = 'http://localhost:3000';
+const URL = 'http://192.168.2.70:3000';
 
 export default class MapView extends Component {
   static defaultProps = {
-    adCode: 'china',
+    adCode: 360000,
     renderView:() => {}
   };
 
