@@ -9,7 +9,7 @@ const URL = 'http://localhost:3000';
 
 export default class MapView extends Component {
   static defaultProps = {
-    adCode: 320000,
+    adCode: 'china',
     renderView:() => {}
   };
 
@@ -136,7 +136,8 @@ export default class MapView extends Component {
       style,
       children,
       data,
-      renderView
+      renderView,
+      config,
     } = this.props;
 
     const displayRatio = 1;
@@ -149,6 +150,7 @@ export default class MapView extends Component {
       >
         {children}
         <Geo
+          config={config}
           renderView={renderView}
           mapName={mapName}
           geoJson={geoJson}

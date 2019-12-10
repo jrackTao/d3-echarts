@@ -1,9 +1,9 @@
 import { Module } from '@nestjs/common';
-import { GeoJsonController, StatisticController, DivisionController } from './controller';
-import { GeoJsonService, StatisticService, DivisionService } from './services/index';
+import { GeoJsonController, DivisionController } from './controller';
+import { GeoJsonService, DivisionService } from './services/index';
 @Module({
   imports: [],
-  controllers: [DivisionController, GeoJsonController, StatisticController],
-  providers: [DivisionService, GeoJsonService, StatisticService],
+  controllers: [DivisionController, GeoJsonController],
+  providers: [DivisionService, GeoJsonService],
 })
 export class AppModule { }

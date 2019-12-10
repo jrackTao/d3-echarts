@@ -19,6 +19,7 @@ module.exports = {
       template: path.resolve(__dirname, 'src/samples/index.html')
     })
   ],
+  mode:'development',
   devtool: 'source-map',
   devServer: {
     host: '0.0.0.0',

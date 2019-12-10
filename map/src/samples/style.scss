@@ -23,23 +23,25 @@ body{
   position: absolute;
   display: flex;
   flex-direction: column;
-  background-color: rgba(255, 255, 255, 0.4);
-  padding: 10px;
+  background-color: #a7a7a7;
+  padding: 5px;
   border-radius: 5px;
-  border: 2px solid #fff;
+  border: 1px solid #fff;
+  transform: translate(-50%, -50%);
+  font-size: 12px;
 
   .box-r{
     display: flex;
     align-items: center;
   }
   .box-l{
-    width: 10px;
-    height: 10px;
-    background-color: #f00;
+    width: 8px;
+    height: 8px;
+    background-color: rgb(90, 70, 204);
     border-radius: 50%;
   }
   .box-v{
-    color: #f00;
+    color: rgb(236, 23, 16);
     white-space: nowrap;
     margin-left: 6px;
   }
