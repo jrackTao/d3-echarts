@@ -7,13 +7,12 @@ export default class App extends Component {
   state = {
     nodes: [],
     config: {
-      width: 1000,
-      height: 800,
+      width: 800,
+      height: 600,
     }
   };
 
   renderView = nodes => {
-    // console.log(nodes);
     nodes = nodes.map(node => {
       const value = new Array(~~(Math.random() * 6))
         .fill(0)

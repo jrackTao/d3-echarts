@@ -71,7 +71,6 @@ export default class App extends Component {
       layout: {width, height}
     } = node;
     const r = width > height ? width / 2 : height / 2;
-    console.log('radius', r);
     return r;
   };
 
