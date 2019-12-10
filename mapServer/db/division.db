@@ -3256,4 +3256,3 @@
 {"id":"360921","name":"奉新县","adcode":"360921","level":"district","_id":"zwI3GaBfcWwPoZxW"}
 {"id":"222405","name":"龙井市","adcode":"222405","level":"district","_id":"zzjTxQk89qSMTL7l"}
 {"$$indexCreated":{"fieldName":"id","unique":true,"sparse":false}}
-{"$$indexCreated":{"fieldName":"id","unique":true}}
