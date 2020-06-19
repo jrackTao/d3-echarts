@@ -1,4 +1,6 @@
 ## map 前端页面 d3 + echart
+[![GitHub Last Commit](https://img.shields.io/github/last-commit/jrackTao/d3-echarts)](https://img.shields.io/github/last-commit/jrackTao/d3-echarts)&nbsp; &nbsp; 
+[![GitHub Stars](https://img.shields.io/github/stars/jrackTao/d3-echarts?style=social)](https://img.shields.io/github/stars/jrackTao/d3-echarts?style=social)
 ### 1、安装 npm install
 ### 2、运行 npm start
 
